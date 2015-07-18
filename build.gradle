@@ -1,0 +1,34 @@
+apply plugin: 'java'
+apply plugin: 'jacoco'
+
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+
+repositories{
+	mavenCentral()
+}
+
+sourceSets{
+	main{
+		java{
+			srcDir 'src'
+		}
+	}
+	test{
+		java{
+			srcDir 'test'
+		}
+	}
+}
+
+dependencies{
+	testCompile 'junit:junit:4.11'
+}
+
+test{
+	jacoco{
+		toolVersion = '0.7.1.201405082137'
+		destinationFile = file ("build/jacoco/jacoco.exec")
+		append = true
+	}
+}
