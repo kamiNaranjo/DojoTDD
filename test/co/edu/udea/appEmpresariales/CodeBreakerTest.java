@@ -17,7 +17,7 @@ public class CodeBreakerTest {
 	
 	@Test
 	public void todosCoincidenMismaPosicion(){		
-		String respuestaEsperada = "XXX-";
+		String respuestaEsperada = "XXXX";
 		assertEquals(respuestaEsperada, codebreacker.buscarCoincidencia("2864"));
 	}
 	
